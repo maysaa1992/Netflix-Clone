@@ -10,6 +10,8 @@ function NavBar() {
           <Navbar.Brand href="/">Navbar</Navbar.Brand>
           <Nav className="me-auto">
             <Nav.Link href="/">Home</Nav.Link>
+            <Nav.Link href="/FavList">FavList</Nav.Link>
+
             <Nav.Link href="/trending">MovieList</Nav.Link>
           </Nav>
         </Container>

@@ -10,6 +10,18 @@ export default function Home() {
         const jsonData = await response.json();
         setMovies(jsonData)
     }
+    function commentHandler (newMoveData,id){
+      Movies.map(movie=>{
+        if(movie.id === id){
+          movie.comment=newMoveData.userComment;
+
+          return movie;
+        }
+        else {return movie}
+        
+      })
+    }
+
 
     useEffect(() => {
         getMovies()
@@ -18,7 +30,7 @@ export default function Home() {
     return (
         <>   
           <h1>this is home components</h1> 
-          <MovieList Movies={Movies} />
+          <MovieList Movies={Movies}  commentHandler={commentHandler}/>
  
         </>
     )}
